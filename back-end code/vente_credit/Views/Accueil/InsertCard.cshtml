@@ -1,0 +1,17 @@
+﻿<table class="table-default table-liste">
+    <thead>
+    <td class="table-header">carte</td>
+    <td class="table-header">nombres</td>
+    <td class="table-header">distribue a</td>
+    </thead>
+    <tbody>
+        @foreach (var carteDistr in ViewBag.ListCarteDistr)
+        {
+            <tr class="table-body table-body-light" ondblclick="showDetail(@carteDistr.Id)">
+                <td>@carteDistr.Carte</td>
+                <td>@carteDistr.Quantite</td>
+                <td>@carteDistr.Employe</td>
+            </tr>
+        }
+    </tbody>
+</table>

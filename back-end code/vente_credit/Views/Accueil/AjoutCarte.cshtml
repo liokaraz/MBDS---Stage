@@ -1,0 +1,42 @@
+﻿
+<div class="modal-background"></div>
+<div class="modal-sm modal">
+    <div class="grid">
+        <div class="grid__cell">
+            <h2 class="modal-title">ajout carte</h2>
+            <div class="modal-body">
+                <div class="input-bloc">
+                    <label class="input-label input-label-carte">carte</label>
+                    <select class="input-select input-carte" name="carte" id="carte">
+                        <option value="0">sélectionner une carte</option>
+                        @foreach (var carte in ViewBag.ListeCarte)
+                        {
+                            <option value="@carte.Id">@carte.Libelle</option>
+                        }
+                    </select>
+                </div>
+                <div class="input-bloc input-bloc-bottom">
+                    <label class="input-label">employé</label>
+                    <select class="input-select input-employe" name="employe" id="employe">
+                        <option value="0">sélectionner un employé</option>
+                        @foreach (var emp in ViewBag.ListEmp)
+                        {
+                            <option value="@emp.Id">@emp.Prenom</option>
+                        }
+                    </select>
+                </div>
+                <div class="input-bloc input-bloc-bottom">
+                    <label class="input-label">quantité</label>
+                    <input class="input-number input-quantite" type="number" name="quantite" id="quantite" />
+                </div>
+                <div class="input-bloc input-bloc-bottom">
+                    <label class="input-label">date</label>
+                    <input class="input-date input-date" type="date" name="date" id="date"/>
+                </div>
+                <div class="input-bloc input-bloc-bottom input-bloc-submit">
+                    <a class="btn-primary-border btn-add-card btn-link" href="javascript:void(0)">ajouter</a><a class="btn-dark btn-close btn-link" href="#">annuler</a>                   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

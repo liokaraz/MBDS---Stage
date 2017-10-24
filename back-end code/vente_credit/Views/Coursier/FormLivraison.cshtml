@@ -1,0 +1,40 @@
+﻿
+<div class="modal-background"></div>
+<div class="modal-sm modal">
+    <div class="grid">
+        <div class="grid__cell">
+            <h2 class="modal-title">Livraison</h2>
+            <div class="modal-body">
+                <input type="hidden" class="input-default-txt" name="idEmployeStock" id="idEmployeStock">
+                <input type="hidden" class="input-default-txt" name="idEmploye" id="idEmploye" value="@Session["UtilisateurId"]">
+                <div class="input-bloc">
+                    <label class="input-label input-label-carte">Employe</label>
+                    <input class="input-default-txt" name="employe" id="employe" value="@Session["Utilisateur"]" disabled="disabled" />
+                </div>
+                <div class="input-bloc input-bloc-bottom">
+                    <label class="input-label">quantité</label>
+                    <input class="input-number" type="number" name="quantite" id="quantite" value="0" />
+                </div>
+                <div class="input-bloc input-bloc-bottom">
+                    <input class="input-default-txt" type="hidden" name="resteNonVendu" id="resteNonVendu" value="0" />
+                </div>
+                <div class="input-bloc input-bloc-bottom">
+                    <label class="input-label">date de livraison</label>
+                    <input class="input-date" type="date" name="dateLivraison" id="dateLivraison" />
+                </div>
+                <div class="input-bloc input-bloc-bottom">
+                    <label class="input-label">point de vente</label>
+                    <select class="input-select" name="pointDeVente" id="pointDeVente">
+                        <option value="0">sélectionner un pv</option>
+                        @foreach (var pv in ViewBag.listPointVente)
+                        {
+                            <option value="@pv.Id">@pv.Libelle</option>
+                        }
+                    </select>
+
+                </div>
+                <div class="input-bloc input-bloc-bottom input-bloc-submit"><a class="btn-primary-border btn-add-delivery btn-link" href="javascript:void(0)">ajouter</a><a class="btn-dark btn-close btn-link" href="#">annuler</a></div>
+            </div>
+        </div>
+    </div>
+</div>

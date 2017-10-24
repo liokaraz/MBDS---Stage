@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+@Html.Partial("~/Views/Layout/Head.cshtml")
+<body>
+    <div class="wrapper">
+        @Html.Partial("~/Views/Layout/Header.cshtml")
+        <main class="l-main">
+            <div class="grid">
+                <div class="grid__cell 1/4--desk">
+                    @Html.Partial("~/Views/Menu/MenuCoursier.cshtml")
+                </div>
+                <div class="grid__cell 3/4--desk">
+                    <div class="content">
+                        <div class="content__header">
+                            <h1 class="content__header-title">gestion point de vente</h1>
+                            <p class="content__header-txt">Suivie des points de ventes (stock actuels, etc, ...)</p>
+                        </div>
+                        <div class="content__body">
+                            <a class="btn-warning btn-link js-btn-show-card btn-icon-sm" href="/Coursier/PointDeVenteMap">
+                                <img src="/image/print/list.png" alt="carte" width="32" height="32">
+                                <p class="btn-icon-txt">afficher sur la carte</p>
+                            </a>
+                            <div class="content__body-table" id="js-content__body">
+                                <table class="table-default table-liste">
+                                    <thead>
+                                    <td class="table-header">point de vente</td>
+                                    <td class="table-header">zone de travail</td>
+                                    <td class="table-header">stock actuel</td>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var pv in ViewBag.listPointDeVenteStock)
+                                        {
+                                            <tr class="table-body table-body-light table-body-row">
+                                                <td>@pv.PointDeVente</td>
+                                                <td>@pv.ZoneTravail</td>
+                                                <td>@pv.Stock</td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        @Html.Partial("~/Views/Layout/Footer.cshtml")
+        @Html.Partial("~/Views/Layout/Script.cshtml")
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHTRkTQufLOIRw30x5U2NoaTBGKmKuAqI&callback=initMap"></script>
+    </div>
+</body>
+</html>

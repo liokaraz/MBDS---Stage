@@ -1,0 +1,33 @@
+﻿<div class="header">
+    <div class="grid">
+        <div class="grid__cell 1/2--thumb 1/2--handheld 1/2--handheld-and-up 1/3--desk btn__menu-hamburger">
+            <button class="btn-menu">
+                <img alt="menu hamburger" src="/image/modal/menu.png">
+            </button>
+        </div>
+        <div class="grid__cell 1/4--desk 1/2--handheld">
+            <div class="header-logo">
+                <h1 class="header-logo-txt">bienvenue</h1>
+            </div>
+        </div>
+        <div class="grid__cell 1/4--desk 1/2--handheld">
+            <div class="header-logImg"><img class="header-logImg-img" src="/image/header/logo2.0.png"></div>
+        </div>
+        <div class="grid__cell 1/4--desk">
+            <div class="header-user">
+                <img class="header-user-img" src="/image/accueil/@(Session["UtilisateurId"]).jpg" width="100" height="100">
+                <p class="header-user-name">@Session["Utilisateur"]</p>
+            </div>
+            <div class="header-user-menu">
+                <ul class="header-user-menu-list">
+                    <a class="header-user-menu-link" href="#">
+                        <li class="header-user-menu-item">profil</li>
+                    </a>
+                    <a class="header-user-menu-link" href="/Login">
+                        <li class="header-user-menu-item">logout</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

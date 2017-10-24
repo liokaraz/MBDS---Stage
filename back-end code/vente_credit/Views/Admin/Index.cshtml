@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+@Html.Partial("~/Views/Layout/Head.cshtml")
+<body>
+    <div class="wrapper">
+        @Html.Partial("~/Views/Menu/MenuAdminMobile.cshtml")
+        @Html.Partial("~/Views/Layout/Header.cshtml")
+        <main class="l-main">
+            <div class="grid">
+                <div class="grid__cell 1/4--desk">
+                    @Html.Partial("~/Views/Menu/MenuAdmin.cshtml")
+                </div>
+                <div class="grid__cell 3/4--desk">
+                    <div class="content">
+                        <div class="content__header">
+                            <h1 class="content__header-title">Utilisateur</h1>
+                            <p class="content__header-txt">C'est la gestion des utilisateurs</p>
+                        </div>
+                        <div class="content__body">
+                            <div class="content__body-link">
+                                <a class="btn-warning btn-link btn-icon js-btn-add-card" href="#">
+                                    <img src="/image/print/add.png">
+                                    <p class="btn-icon-txt">ajouter un utilisateur</p>
+                                </a><a class="btn-primary btn-link btn-icon btn-search" href="#">
+                                    <img src="/image/print/search.png">
+                                    <p class="btn-icon-txt">recherche</p>
+                                </a>
+                            </div>
+                            <div class="content__body-table" id="js-content__body">
+                                <table class="table-default table-liste">
+                                    <thead>
+                                    <td class="table-header">nom</td>
+                                    <td class="table-header">prénom</td>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="table-body table-body-light table-body-row" ondblclick="showDetail(this)">
+                                            <td>RAZAFINDRAVOHITRA </td>
+                                            <td>T.Lioka</td>
+                                        </tr>
+                                        <tr class="table-body table-body-light table-body-row">
+                                            <td>RAMANANTSOA</td>
+                                            <td>Malala</td>
+                                        </tr>
+                                        <tr class="table-body table-body-light table-body-row">
+                                            <td>RAZAFINDRAVOHITRA</td>
+                                            <td>Isaia</td>
+                                        </tr>
+                                        <tr class="table-body table-body-light table-body-row">
+                                            <td>RAZAFINDRAINIBE</td>
+                                            <td>Eric</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        @Html.Partial("~/Views/Layout/Footer.cshtml")
+        @Html.Partial("~/Views/Layout/Script.cshtml")
+    </div>
+</body>

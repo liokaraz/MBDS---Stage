@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+@Html.Partial("~/Views/Layout/Head.cshtml")
+<body>
+    <div class="wrapper">
+        @Html.Partial("~/Views/Layout/Header.cshtml")
+        <main class="l-main">
+            @Html.Partial("~/Views/Notification/NotifAdd.cshtml")
+            <div class="grid">
+                <div class="grid__cell 1/4--desk">
+                    @Html.Partial("~/Views/Menu/MenuPointDeVente.cshtml")
+                </div>
+                <div class="grid__cell 3/4--desk">
+                    <div class="content">
+                        <div class="content__header">
+                            <h1 class="content__header-title">Statistique en général</h1>
+                            <p class="content__header-txt">Les statistiques sont représentés ci-dessous</p>
+                        </div>
+                        <div class="content__body">
+                            <div class="grid">
+                                <div class="grid__cell 1/2--desk">
+                                    <table class="table-default table-liste table-modal">
+                                        <thead>
+                                            <td class="table-header">Carte</td>
+                                            <td class="table-header">Quantité vendue</td>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var stat in ViewBag.ListStatistique) 
+                                            {
+                                                <tr class="table-body table-body-light table-body-row">
+                                                    <td>@stat.Carte</td>
+                                                    <td>@stat.Quantite</td>
+                                                </tr>
+                                            }
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="grid__cell 1/2--desk">
+                                    <div class="content__body-chart">
+                                        @foreach (var pourcentage in ViewBag.ListPourcentage)
+                                        {
+                                            if (pourcentage.PourcentageVente >= 80)
+                                            {
+                                                <div class="skillbar" data-percent="@pourcentage.PourcentageVente">
+                                                    <span class="skillbar-title skillbar-title-success">@pourcentage.Carte</span>
+                                                    <p class="skillbar-bar skillbar-bar-success"></p><span class="skill-bar-percent"></span>
+                                                </div>
+                                            }
+                                            if(pourcentage.PourcentageVente >= 50 && pourcentage.PourcentageVente < 80)
+                                            {
+                                                <div class="skillbar" data-percent="@pourcentage.PourcentageVente">
+                                                    <span class="skillbar-title skillbar-title-standard">@pourcentage.Carte</span>
+                                                    <p class="skillbar-bar skillbar-bar-standard"></p><span class="skill-bar-percent"></span>
+                                                </div>
+                                            }
+                                            if (pourcentage.PourcentageVente < 50 && pourcentage.PourcentageVente >= 20)
+                                            {
+                                                <div class="skillbar" data-percent="@pourcentage.PourcentageVente">
+                                                    <span class="skillbar-title skillbar-title-warning">@pourcentage.Carte</span>
+                                                    <p class="skillbar-bar skillbar-bar-warning"></p><span class="skill-bar-percent"></span>
+                                                </div>
+                                            }
+                                            if(pourcentage.PourcentageVente < 20) 
+                                            {
+                                                <div class="skillbar" data-percent="@pourcentage.PourcentageVente">
+                                                    <span class="skillbar-title skillbar-title-danger">@pourcentage.Carte</span>
+                                                    <p class="skillbar-bar skillbar-bar-danger"></p><span class="skill-bar-percent"></span>
+                                                </div>
+                                            }
+                                        }
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        @Html.Partial("~/Views/Layout/Footer.cshtml")
+        @Html.Partial("~/Views/Layout/Script.cshtml")
+    </div>
+</body>
+</html>
+

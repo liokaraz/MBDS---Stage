@@ -1,0 +1,29 @@
+﻿<table class="table-default table-liste">
+    <thead>
+    <td class="table-header">Carte</td>
+    <td class="table-header">Nombre</td>
+    <td class="table-header">Options</td>
+    </thead>
+    <tbody>
+        @foreach (var livraison in ViewBag.ListeLivraison)
+        {
+            <tr class="table-body table-body-light table-body-row">
+                <td>@livraison.Carte</td>
+                <td>@livraison.Quantite</td>
+                <td>
+                    <div class="table-body-option">
+                        <a class="btn-primary btn-link btn-icon-sm js-btn-market" href="javascript:void(0)" onclick="showFormCardSale(@livraison.Id)">
+                            <img src="/image/print/market.png" alt="delivery" width="24" height="24">
+                            <p class="btn-icon-txt">ajouter carte vendues</p>
+                        </a>
+                        <a class="btn-warning btn-link btn-icon-sm js-btn-market-detail" href="javascript:void(0)" onclick="#">
+                            <img src="/image/print/detail.png" alt="details" width="24" height="24">
+                            <p class="btn-icon-txt">Details</p>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>

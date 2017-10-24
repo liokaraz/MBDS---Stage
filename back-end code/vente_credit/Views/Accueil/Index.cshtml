@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+@Html.Partial("~/Views/Layout/Head.cshtml")
+<body>
+    <div class="wrapper">
+        @Html.Partial("~/Views/Menu/MenuDistributeurMobile.cshtml")
+        @Html.Partial("~/Views/Layout/Header.cshtml")
+        <main class="l-main">
+            @Html.Partial("~/Views/Accueil/AjoutCarte.cshtml")
+            @Html.Partial("~/Views/Accueil/notifAdd.cshtml")
+            @Html.Partial("~/Views/Accueil/Detail.cshtml")
+            <div class="grid">
+                <div class="grid__cell 1/4--desk">
+                    @Html.Partial("~/Views/Menu/MenuDistributeur.cshtml")
+                </div>
+                <div class="grid__cell 3/4--desk">
+                    <div class="content">
+                        <div class="content__header">
+                            <h1 class="content__header-title">gestion carte</h1>
+                            <p class="content__header-txt">C'est la section où l'on gère la distribution des cartes de crédits</p>
+                        </div>
+                        <div class="content__body">
+                            <div class="content__body-link">
+                                <a class="btn-warning btn-link btn-icon js-btn-add-card" href="#">
+                                    <img src="/image/print/add.png">
+                                    <p class="btn-icon-txt">ajouter carte</p>
+                                </a>
+                                <a class="btn-primary btn-link btn-icon btn-search" href="#">
+                                    <img src="/image/print/search.png">
+                                    <p class="btn-icon-txt">recherche</p>
+                                </a>
+                            </div>
+                            <div class="content__body-table" id="js-content__body">
+                                <table class="table-default table-liste">
+                                    <thead>
+                                        <td class="table-header">carte</td>
+                                        <td class="table-header">nombres</td>
+                                        <td class="table-header">distribue a</td>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var carteDistr in ViewBag.ListeCarteDistr)
+                                        {
+                                            <tr class="table-body table-body-light table-body-row" ondblclick="showDetail(@carteDistr.Id)">
+                                                <td>@carteDistr.Carte</td>
+                                                <td>@carteDistr.Quantite</td>
+                                                <td>@carteDistr.Employe</td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        @Html.Partial("~/Views/Layout/Footer.cshtml")
+        @Html.Partial("~/Views/Layout/Script.cshtml")
+    </div>
+</body>
+</html>

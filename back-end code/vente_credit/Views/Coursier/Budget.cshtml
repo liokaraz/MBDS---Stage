@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+@Html.Partial("~/Views/Layout/Head.cshtml")
+<body>
+    <div class="wrapper">
+        @Html.Partial("~/Views/Layout/Header.cshtml")
+        <main class="l-main">
+            <div class="grid">
+                <div class="grid__cell 1/4--desk">
+                    @Html.Partial("~/Views/Menu/MenuCoursier.cshtml")
+                </div>
+                <div class="grid__cell 3/4--desk">
+                    <div class="content">
+                        <div class="content__header">
+                            <h1 class="content__header-title">Statistique en général</h1>
+                            <p class="content__header-txt">Ici vous trouverez le données représentées en graphes</p>
+                        </div>
+                        <div class="content__body">
+                            <div class="grid">
+                                <div class="grid__cell 1/2--desk">
+                                    <table class="table-default table-liste table-modal">
+                                        <thead>
+                                        <td class="table-header">Point de vente </td>
+                                        <td class="table-header">Quantite vendue</td>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="table-body table-body-light table-body-row">
+                                                <td>PV01</td>
+                                                <td>50</td>
+                                            </tr>
+                                            <tr class="table-body table-body-light table-body-row">
+                                                <td>PV02</td>
+                                                <td>10</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="grid__cell 1/2--desk">
+                                    <div class="content__body-chart">
+                                        <div class="skillbar" data-percent="80">
+                                            <span class="skillbar-title skillbar-title-success">pv1</span>
+                                            <p class="skillbar-bar skillbar-bar-success"></p><span class="skill-bar-percent"></span>
+                                        </div>
+                                        <div class="skillbar" data-percent="40">
+                                            <span class="skillbar-title skillbar-title-success">pv2</span>
+                                            <p class="skillbar-bar skillbar-bar-warning"></p><span class="skill-bar-percent"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        @Html.Partial("~/Views/Layout/Footer.cshtml")
+        @Html.Partial("~/Views/Layout/Script.cshtml")
+    </div>
+</body>
+</html>
+

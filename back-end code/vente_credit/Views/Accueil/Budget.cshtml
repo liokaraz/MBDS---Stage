@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+@Html.Partial("~/Views/Layout/Head.cshtml")
+<body>
+    <div class="wrapper">
+        @Html.Partial("~/Views/Layout/Header.cshtml")
+        <main class="l-main">
+            @Html.Partial("~/Views/Accueil/notifAdd.cshtml")
+            @Html.Partial("~/Views/Accueil/Detail.cshtml")
+            <div class="grid">
+                <div class="grid__cell 1/4--desk">
+                    @Html.Partial("~/Views/Menu/MenuDistributeur.cshtml")
+                </div>
+                <div class="grid__cell 3/4--desk">
+                    <div class="content">
+                        <div class="content__header">
+                            <h1 class="content__header-title">Statistique en général</h1>
+                            <p class="content__header-txt">Ici vous trouverez le données représentées en graphes</p>
+                        </div>
+                        <div class="content__body">
+                            <div class="grid">
+                                <div class="grid__cell 1/2--desk">
+                                    <table class="table-default table-liste table-modal">
+                                        <thead>
+                                            <td class="table-header">Livreur </td>
+                                            <td class="table-header">Quantite livre</td>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="table-body table-body-light table-body-row">
+                                                <td>RAMANANTSOA Malala</td>
+                                                <td>50</td>
+                                            </tr>
+                                            <tr class="table-body table-body-light table-body-row">
+                                                <td>RABARIJAONA Hery</td>
+                                                <td>100</td>
+                                            </tr>
+                                            <tr class="table-body table-body-light table-body-row">
+                                                <td>RANDRIATSIFERANA Fano</td>
+                                                <td>70</td>
+                                            </tr>
+                                            <tr class="table-body table-body-light table-body-row">
+                                                <td>ANDRIAMAPIANINA Toky</td>
+                                                <td>250</td>
+                                            </tr>
+                                            <tr class="table-body table-body-light table-body-row">
+                                                <td>RAKOTO Eric</td>
+                                                <td>100</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="grid__cell 1/2--desk">
+                                    <div class="content__body-chart">
+                                        <div class="skillbar" data-percent="71">
+                                            <span class="skillbar-title skillbar-title-success">Malala</span>
+                                            <p class="skillbar-bar skillbar-bar-success"></p><span class="skill-bar-percent"></span>
+                                        </div>
+                                        <div class="skillbar" data-percent="50">
+                                            <span class="skillbar-title skillbar-title-standard">Hery</span>
+                                            <p class="skillbar-bar skillbar-bar-standard"></p><span class="skill-bar-percent"></span>
+                                        </div>
+                                        <div class="skillbar" data-percent="23">
+                                            <span class="skillbar-title skillbar-title-danger">Fano</span>
+                                            <p class="skillbar-bar skillbar-bar-danger"></p><span class="skill-bar-percent"></span>
+                                        </div>
+                                        <div class="skillbar" data-percent="83">
+                                            <span class="skillbar-title skillbar-title-success">Toky</span>
+                                            <p class="skillbar-bar skillbar-bar-success"></p><span class="skill-bar-percent"></span>
+                                        </div>
+                                        <div class="skillbar" data-percent="37">
+                                            <span class="skillbar-title skillbar-title-warning">Eric</span>
+                                            <p class="skillbar-bar skillbar-bar-warning"></p><span class="skill-bar-percent"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid__cell 1/2--desk">
+                                    <svg id="svg"></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        @Html.Partial("~/Views/Layout/Footer.cshtml")
+        @Html.Partial("~/Views/Layout/ScriptChart.cshtml")
+        @Html.Partial("~/Views/Layout/Script.cshtml")
+        
+    </div>
+</body>
+</html>
+

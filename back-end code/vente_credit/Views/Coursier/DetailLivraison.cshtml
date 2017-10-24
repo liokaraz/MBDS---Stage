@@ -1,0 +1,17 @@
+﻿<table class="table-default table-liste table-modal">
+    <thead>
+    <td class="table-header">Quantite</td>
+    <td class="table-header">point de vente</td>
+    <td class="table-header">Date de livraison</td>
+    </thead>
+    <tbody>
+        @foreach (var detail in ViewBag.listeDetailCarte)
+        {
+            <tr class="table-body table-body-light table-body-row">
+                <td>@detail.Quantite</td>
+                <td>@detail.PointDeVente</td>
+                <td>@detail.Date</td>
+            </tr>
+        }
+    </tbody>
+</table>

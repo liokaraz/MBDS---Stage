@@ -1,0 +1,29 @@
+﻿<table class="table-default table-liste">
+    <thead>
+    <td class="table-header">carte</td>
+    <td class="table-header">nombres</td>
+    <td class="table-header">Options</td>
+
+    </thead>
+    <tbody>
+        @foreach (var stock in ViewBag.listStock)
+        {
+            <tr class="table-body table-body-light table-body-row" ondblclick="">
+                <td>@stock.Carte</td>
+                <td>@stock.Stock </td>
+                <td>
+                    <div class="table-body-option">
+                        <a class="btn-primary btn-link btn-icon-sm js-btn-delivery" href="javascript:void(0)" onclick="showFormLivraison(@stock.Id)">
+                            <img src="/image/print/delivery2.0.png" alt="delivery" width="24" height="24">
+                            <p class="btn-icon-txt">Livrer</p>
+                        </a>
+                        <a class="btn-warning btn-link btn-icon-sm js-btn-detail" href="javascript:void(0)" onclick="showDetailsLivraison(@stock.Id)">
+                            <img src="/image/print/detail.png" alt="details" width="24" height="24">
+                            <p class="btn-icon-txt">Details</p>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
