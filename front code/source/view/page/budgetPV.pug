@@ -1,0 +1,62 @@
+extends ../base/layout.pug
+include ./mixin
+
+block main
+  .grid
+    .grid__cell(class="1/4--desk")
+      .menu
+        +menu({
+          img:'icone-budget.png',
+          title: "budget"
+        })
+        +menu({
+          img:'icone-carte.png',
+          title: "carte"
+        })
+        +menu({
+          img:'icone-point-de-vente.png',
+          title: "point de vente"
+        })
+    .grid__cell(class="3/4--desk")
+      .content
+        .content__header 
+          h1.content__header-title Statistique en général
+          p.content__header-txt Ici vous trouverez le budget hebdomadaire, mensuel, etc, ...
+        .content__body
+          .grid
+            .grid__cell(class="1/2--desk")
+              table.table-default.table-liste.table-modal
+                thead
+                    td.table-header Carte
+                    td.table-header Quantité vendue
+                tbody
+                  tr.table-body.table-body-light.table-body-row
+                    td .
+                    td .
+                  tr.table-body.table-body-light.table-body-row
+                    td .
+                    td .
+                  tr.table-body.table-body-light.table-body-row
+                    td .
+                    td .
+                  tr.table-body.table-body-light.table-body-row
+                    td .
+                    td .
+            .grid__cell(class="1/2--desk")
+              .content__body-chart
+                .skillbar(data-percent="50")
+                  span.skillbar-title.skillbar-title-warning O1
+                  p.skillbar-bar.skillbar-bar-warning
+                  span.skill-bar-percent
+                .skillbar(data-percent="98")
+                  span.skillbar-title.skillbar-title-success O2
+                  p.skillbar-bar.skillbar-bar-success
+                  span.skill-bar-percent
+                .skillbar(data-percent="30")
+                  span.skillbar-title.skillbar-title-danger O3
+                  p.skillbar-bar.skillbar-bar-danger
+                  span.skill-bar-percent
+                .skillbar(data-percent="70")
+                  span.skillbar-title.skillbar-title-standard O4
+                  p.skillbar-bar.skillbar-bar-standard
+                  span.skill-bar-percent

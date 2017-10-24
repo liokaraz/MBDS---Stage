@@ -1,0 +1,160 @@
+.btn {
+  &-warning {
+    background-color: $warning;
+    color: $white;
+    font-family: $font-template;
+    text-transform: capitalize;
+    font-weight: lighter;
+    padding: 10px;
+    &:hover {
+      background-color: $warning-light;
+    }
+  }
+  &-dark {
+    @extend .btn-warning;
+    background-color: $title-color-default;
+    &:hover {
+      background-color: $text-color;
+    }
+  }
+  &-success-dark {
+    @extend .btn-warning;
+    background-color: $success-dark;
+    &:hover {
+      background-color: $success-light;
+    }  
+  }
+  &-danger {
+    @extend .btn-warning;
+    background-color: $color-danger;
+    &:hover {
+      background-color: $color-danger-light;
+    }
+  }
+  &-white {
+    @extend .btn-warning;
+    background-color: $white;
+    color: $text-color;
+    border: solid 0.3px $title-color-default;
+    &:hover {
+      background-color: $white;
+      color: $text-color;
+    }
+  }
+  &-link {
+    text-decoration: none;
+    &-option {
+      color: $white;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+    @include media(all-phones) {
+      width: 50% !important;
+    }
+    &-menuhamburger {
+      width: auto !important;
+    }
+  }
+  &-primary {
+    @extend .btn-primary-border;
+  }
+  &-primary-border {
+    background-color: $primary-color;
+    border: none;
+    color: $white;
+    padding: 10px;
+    //border-radius: 20px;
+    cursor: pointer;
+    font-weight: lighter;
+    font-family: $font-template;
+    width: 150px;
+  }
+  &-login {
+    margin-top: 5px;
+  }
+  &-liste-card {
+    margin-left: 10px;
+  }
+  &-choice {
+    text-decoration: none;
+    margin-left: 10px;
+    padding: 0px 10px;
+  }
+  &-close {
+    width: 150px;
+    padding: 8px 47px;
+    margin-left: 5px;
+    &-detail {
+      margin-left: 83%;
+    }
+    &-option {
+    }
+    &-second {
+      @extend .btn-close;
+      margin-left: 65%;
+    }
+  }
+  &-add {
+    &-card {
+      text-transform: capitalize;
+      width: 150px;
+      padding: 8px 47px;
+      margin-left: 5px;
+    }
+    &-delivery {
+      @extend .btn-add-card;
+    }
+  }
+  &-pdf {
+    margin-left: 5px;
+  }
+  &-icon {
+    display: flex;
+    width: 20%;
+    align-items: center;
+    flex-direction: row;
+    height: 32px;
+    border-radius: 10px;
+    &-txt {
+      margin-left: 5px;
+    }
+    &-sm {
+      @extend .btn-icon;
+      height: 24px;
+  }
+  }
+  &-option {
+    margin-left: 5px;
+  }
+  &-menu {
+    background-color: Transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 20;
+    &:focus {
+      outline: none;
+    }
+    &-cancel {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      padding-bottom: 20px;
+      left: 100%;
+      transform: translate(39%,0);
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  &__menu-hamburger {
+    z-index: 500;
+    position: fixed;
+    @include media(desktop) {
+      display: none;
+    }
+  }
+  &-search {
+    margin-left: 5px;
+  }
+}

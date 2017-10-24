@@ -1,0 +1,47 @@
+.table {
+  font-family: $font-template;
+  &-default {
+    width: 100%;
+    border-collapse: collapse !important;
+  }
+  &-header {
+    border-left: solid 1px $white;
+    text-transform: capitalize;
+    color: $white;
+    padding: 10px;
+    background-color:$primary-color;
+    text-align: center;
+    font-weight: lighter;
+  }
+  &-liste {
+    margin-top: 20px;
+  }
+  &-body {
+    text-align: left;
+    padding: 20px;
+    border-bottom: solid 0.3px $title-color-default;
+    td {
+      padding: 10px;
+    }
+    &-light {
+      background-color: $white;
+      cursor: pointer;
+      &:hover {
+        background-color: $table-dark;
+      }
+    }
+    &-dark {
+      background-color: $table-dark;
+    }
+    &-option {
+      display: flex;
+      justify-content: flex-start;
+      & > a {
+        margin-right: 5px;
+      }
+    }
+  }
+  &-modal {
+    margin-bottom: 20px;
+  }
+}

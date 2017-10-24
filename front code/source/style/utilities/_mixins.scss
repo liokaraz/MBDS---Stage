@@ -1,0 +1,119 @@
+
+$mobile-device-width-min: 320px;
+$mobile-device-width-max: 480px;
+
+/* Tablet */
+$tablet-device-width-min: 769px;
+$tablet-device-width-max: 1024px;
+
+/* Small Tablet Portrait */
+$small-tablet-portrait-device-width-min: 768px;
+
+/* Big Tablet - mainly for samsung tablets */
+$big-tablet-device-width-min: 800px;
+$max-device-width: 1110px;
+
+$high-pixel-ratio: 2;
+$high-pixel-ratio-min-res: 192dpi;
+$mid-pixel-ratio: 1.5;
+$mid-pixel-ratio-min-res: 144dpi;
+
+@mixin media($mediaList) {
+  @each $m in $mediaList {
+    @include respond-to($m) {
+      @content;
+    }
+  }
+}
+
+@mixin respond-to($media) {
+  /* PHONES */
+  @if $media == portrait-phones {
+    @media only screen and (max-width: $mobile-device-width-min) {
+      @content;
+    }
+  } @else if $media == landscape-phones {
+    @media only screen and (min-width: $mobile-device-width-max) and (max-width: $tablet-device-width-min) {
+      @content;
+    }
+  } @else if $media == all-phones {
+    @media only screen and (max-width: $mobile-device-width-max) {
+      @content;
+    }
+  }
+
+    /* TABLETS */
+  @else if $media == portrait-tablets {
+    @media only screen and (min-width: $mobile-device-width-max) and (max-width: $tablet-device-width-min) {
+      @content;
+    }
+  } @else if ($media == tablets) or ($media == landscape-tablets) {
+    /* I manually added the "+1" for iPad mini issues (if you have problem with it, remove it) */
+    @media only screen and (min-width: $tablet-device-width-min) and (max-width: $tablet-device-width-max - 1) {
+      @content;
+    }
+  } @else if $media == all-tablets {
+    @media only screen and (min-width: $mobile-device-width-max) and (max-width: $tablet-device-width-max - 1) {
+      @content;
+    }
+  }
+
+    //big tablets
+  @else if $media == big-tablets {
+    @media only screen and (min-width: $big-tablet-device-width-min) and (max-width: $tablet-device-width-max - 1) {
+      @content;
+    }
+  }
+
+    /* small tablets */
+  @else if $media == small-tablets-portrait {
+    @media only screen and (min-width: $small-tablet-portrait-device-width-min) and (max-width: $tablet-device-width-min) {
+      @content;
+    }
+  }
+
+    /* DESKTOP */
+  @else if $media == desktop {
+    @media only screen and (min-width: $tablet-device-width-max) {
+      @content;
+    }
+  } @else if $media == pixelhigh {
+    @media only screen and (-webkit-min-device-pixel-ratio: $high-pixel-ratio),
+    only screen and (min--moz-device-pixel-ratio: $high-pixel-ratio),
+    only screen and (-o-min-device-pixel-ratio: $high-pixel-ratio /1),
+    only screen and (min-device-pixel-ratio: $high-pixel-ratio),
+    only screen and (min-resolution: $high-pixel-ratio-min-res),
+    only screen and (min-resolution: 2dppx) {
+      @content;
+    }
+  } @else if $media == pixelmid {
+    @media only screen and (-webkit-min-device-pixel-ratio: $mid-pixel-ratio),
+    only screen and (min--moz-device-pixel-ratio: $mid-pixel-ratio),
+    only screen and (-o-min-device-pixel-ratio: $mid-pixel-ratio /1),
+    only screen and (min-device-pixel-ratio: $mid-pixel-ratio),
+    only screen and (min-resolution: $mid-pixel-ratio-min-res),
+    only screen and (min-resolution: 2dppx) {
+      @content;
+    }
+  } @else if $media == tablet-retina {
+    @media only screen and (min-width: $tablet-device-width-min) and (max-width: $tablet-device-width-max) and (-webkit-min-device-pixel-ratio: $high-pixel-ratio) {
+      @content;
+    }
+  } @else if $media == tablet-retina-landscape {
+    @media only screen and (min-width: $tablet-device-width-min) and (max-width: $tablet-device-width-max) and (orientation : landscape) and (-webkit-min-device-pixel-ratio: $high-pixel-ratio) {
+      @content;
+    }
+  } @else if $media == tablet-retina-portrait {
+    @media only screen and (min-width: $tablet-device-width-min) and (max-width: $tablet-device-width-max) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: $high-pixel-ratio) {
+      @content;
+    }
+  } @else if $media == print {
+    @media print {
+      @content;
+    }
+  } @else {
+    @media only screen and ('#{$media}') {
+      @content;
+    }
+  }
+}

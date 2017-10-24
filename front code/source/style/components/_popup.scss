@@ -1,0 +1,23 @@
+.popup {
+  background: $success;
+  padding: 10px;
+  font-family: $font-template;
+  font-weight: lighter;
+  color: $white;
+  font-size: 18px;
+  position: fixed;
+  top: 0;
+  right: -500px;
+  z-index: 6;
+  &-sm {
+    width: 25%;
+  }
+  &-close {
+    margin-left: 85%;
+    cursor: pointer;
+  }
+  &_content {
+    margin-top: -11px;
+    margin-bottom: 7px
+  }
+}

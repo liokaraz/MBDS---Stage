@@ -1,0 +1,52 @@
+.sticky {
+  &-user {
+    opacity: 0;
+    display: none;
+    position: fixed;
+    z-index:8;
+    margin-left: 75%;
+    top: 40px;
+    text-align: center;
+    background-color: rgba(98,98,98,0.8);
+    padding: 20px;
+    color: $white;
+    font-family: $font-template;
+    //border-radius: 30px;1366
+    @include media("all-phones") {
+      display: none;
+      opacity: 0;
+    }
+    @media only screen and (max-width: 1920px) {
+      margin-left: 67%;
+    }
+    @media only screen and (max-width: 1366px) {
+      margin-left:75%;
+    }
+    @media only screen and (max-width: 1440px) {
+      margin-left:80%;
+    }
+    &-profil {
+      border-bottom: solid 0.3px $white;
+      &-img {
+        border-radius: 30px;
+      }
+      &-txt {
+        font-weight: bold;
+      }
+    }
+    &-option {
+      &-list {
+        list-style-type: none;
+        padding-left: 0;
+      }
+      &-link {
+        text-decoration: none;
+        color: $white;
+        text-transform: uppercase;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

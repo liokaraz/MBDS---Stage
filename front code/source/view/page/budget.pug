@@ -1,0 +1,29 @@
+extends ../base/layout.pug
+include ./mixin
+
+block main
+  include notif-add.pug
+  include detail.pug
+  .grid
+    .grid__cell(class="1/4--desk")
+      .menu
+        +menu({
+          img:'icone-budget.png',
+          title: "budget"
+        })
+        +menu({
+          img:'icone-carte.png',
+          title: "carte"
+        })
+        +menu({
+          img:'icone-point-de-vente.png',
+          title: "point de vente"
+        })
+    .grid__cell(class="3/4--desk")
+      .content
+        .content__header 
+          h1.content__header-title budget
+          p.content__header-txt Ici vous trouverez le budget hebdomadaire, mensuel, etc, ...
+        .content__body
+          .content__body-table#js-content__body
+            

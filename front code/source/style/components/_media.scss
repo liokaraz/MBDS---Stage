@@ -1,0 +1,15 @@
+.img {
+  &-port {
+    position: relative;
+    cursor: pointer;
+    transition: opacity 0.35s, transform 0.35s;
+    transform: scale(1);
+
+  }
+  &-port:hover {
+
+    opacity: 0.1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}

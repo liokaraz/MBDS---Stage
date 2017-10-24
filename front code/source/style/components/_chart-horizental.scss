@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+
+/* Skills bar effects */
+
+
+.skillbar {
+  position: relative;
+  //display: inline-block;
+  margin: 15px 0;
+  width: 100%;
+  background: #eee;
+  height: 35px;
+  border-radius: 3px;
+  width: 100%;
+}
+
+.skillbar-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  font-weight: bold;
+  font-size: 13px;
+  color: #ffffff;
+  background: #6adcfa;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 0 20px;
+  height: 35px;
+  line-height: 35px;
+  /*&-warning {
+    background: $warning-dark;
+  }
+  &-success {
+    background: $success-dark;
+  }
+  &-danger {
+    background: $color-danger;
+  }*/
+
+}
+
+.skillbar-bar {
+  height: 35px;
+  width: 0px;
+  background: #6adcfa;
+  border-radius: 3px;
+  //display: inline-block;
+  &-warning {
+    background: $warning-dark;
+  }
+  &-success {
+    background: $success-dark;
+  }
+  &-danger {
+    background: $color-danger;
+  }
+  &-standard {
+    background: $primary-color;
+  }
+}
+
+.skill-bar-percent {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  font-size: 20px;
+  height: 35px;
+  line-height: 35px;
+  color: #ffffff;
+  color: rgba(0, 0, 0, 0.4);
+}

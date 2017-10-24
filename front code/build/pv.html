@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Vente credit</title>
+    <meta name="description" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="" href="/image/accueil/image-mid.png">
+    <link rel="stylesheet" href="/style/global.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <div class="grid">
+          <div class="grid__cell 1/2--thumb 1/2--handheld 1/2--handheld-and-up 1/3--desk btn__menu-hamburger">
+            <button class="btn-menu"><img alt="menu hamburger" src="../../image/modal/menu.png"></button>
+          </div>
+          <div class="grid__cell 1/4--desk 1/2--handheld">
+            <div class="header-logo">
+              <h1 class="header-logo-txt">bienvenue</h1>
+            </div>
+          </div>
+          <div class="grid__cell 1/4--desk 1/2--handheld">
+            <div class="header-logImg"><img class="header-logImg-img" src="/image/header/logo2.0.png"></div>
+          </div>
+          <div class="grid__cell 1/4--desk">
+            <div class="header-user"><img class="header-user-img" src="/image/accueil/user.jpg" width="100" height="100">
+              <p class="header-user-name">RAZ. Tovoniarivo. Lioka</p>
+            </div>
+            <div class="header-user-menu">
+              <ul class="header-user-menu-list"><a class="header-user-menu-link" href="#">
+                  <li class="header-user-menu-item">profil</li></a><a class="header-user-menu-link" href="#">
+                  <li class="header-user-menu-item">logout</li></a></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menu-hamburger">
+        <button class="btn-menu-cancel"><img alt="bouton cancel" src="../../image/modal/error.png"></button><img class="menu-hamburger-user" src="../../image/accueil/user.jpg" alt="user image" width="100" height="100">
+        <h3 class="menu-hamburger-username">RAZAFINDRAVOHITRA.T.Lioka</h3><a class="btn-link btn-link-menuhamburger" href="#">
+          <div class="menu-item"><img class="menu-item-img" src="../../image/accueil/icone-statistique.png">
+            <p class="menu-item-title">statistique</p>
+          </div></a><a class="btn-link btn-link-menuhamburger" href="#">
+          <div class="menu-item"><img class="menu-item-img" src="../../image/accueil/icone-carte.png">
+            <p class="menu-item-title">carte</p>
+          </div></a><a class="btn-link btn-link-menuhamburger" href="#">
+          <div class="menu-item"><img class="menu-item-img" src="../../image/accueil/icone-point-de-vente.png">
+            <p class="menu-item-title">point de vente</p>
+          </div></a>
+      </div>
+      <main class="l-main">
+        <div class="modal-background"></div>
+        <div class="modal-sm modal">
+          <div class="grid">
+            <div class="grid__cell">
+              <h2 class="modal-title">Vente carte</h2>
+              <div class="modal-body">
+                <input class="input-default-txt" type="hidden" name="idLivraison" id="idLivraison">
+                <div class="input-bloc">
+                  <label class="input-label input-label-carte">quantite</label>
+                  <input class="input-default-txt" type="number" name="quantite" id="quantite" required="required">
+                </div>
+                <div class="input-bloc input-bloc-bottom">
+                  <label class="input-label">point de vente</label>
+                  <input class="input-number" type="text" name="pointDeVente" id="pointDeVente" disabled="disabled">
+                </div>
+                <div class="input-bloc input-bloc-bottom">
+                  <label class="input-label">date vente</label>
+                  <input class="input-date input-date" type="date" name="dateVente" id="dateVente" required="required">
+                </div>
+                <div class="input-bloc input-bloc-bottom input-bloc-submit"><a class="btn-primary-border btn-add-cardsale btn-link" href="javascript:void(0)">ajouter</a><a class="btn-dark btn-close btn-link" href="#">annuler</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-background"></div>
+        <div class="modal-sm modal-second">
+          <div class="grid">
+            <div class="grid__cell">
+              <h2 class="modal-title">Details de la vente</h2>
+              <div class="modal-body">
+                <div id="js-body-details">
+                  <table class="table-default table-liste table-modal">
+                    <thead>
+                      <td class="table-header">Quantite</td>
+                      <td class="table-header">Date de la vente</td>
+                    </thead>
+                    <tbody>
+                      <tr class="table-body table-body-light table-body-row">
+                        <td>.</td>
+                        <td>.</td>
+                        <td>.</td>
+                      </tr>
+                      <tr class="table-body table-body-light table-body-row">
+                        <td>.</td>
+                        <td>.</td>
+                        <td>.</td>
+                      </tr>
+                      <tr class="table-body table-body-light table-body-row">
+                        <td>.</td>
+                        <td>.</td>
+                        <td>.</td>
+                      </tr>
+                      <tr class="table-body table-body-light table-body-row">
+                        <td>.</td>
+                        <td>.</td>
+                        <td>.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div><a class="btn-dark btn-close-second btn-link" href="#">fermer</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid">
+          <div class="grid__cell 1/4--desk">
+            <div class="menu"><a class="btn-link" href="#">
+                <div class="menu-item"><img class="menu-item-img" src="./image/accueil/icone-budget.png"/>
+                  <p class="menu-item-title">budget</p>
+                </div></a><a class="btn-link" href="#">
+                <div class="menu-item"><img class="menu-item-img" src="./image/accueil/icone-carte.png"/>
+                  <p class="menu-item-title">carte</p>
+                </div></a>
+            </div>
+          </div>
+          <div class="grid__cell 3/4--desk">
+            <div class="content">
+              <div class="content__header"> 
+                <h1 class="content__header-title">gestion carte</h1>
+                <p class="content__header-txt">C'est la section où l'on gère la distribution des cartes de crédits</p>
+              </div>
+              <div class="content__body">
+                <div class="content__body-link"><a class="btn-success-dark btn-link btn-icon" href="#"> <img src="./image/print/excel.png">
+                    <p class="btn-icon-txt">Version Excel</p></a><a class="btn-danger btn-link btn-icon btn-pdf" href="#"> <img src="./image/print/pdf.png">
+                    <p class="btn-icon-txt">Version Pdf</p></a></div>
+                <div class="content__body-table" id="js-content__body">
+                  <table class="table-default table-liste">
+                    <thead>
+                      <td class="table-header">Carte</td>
+                      <td class="table-header">Nombre</td>
+                      <td class="table-header">Options</td>
+                    </thead>
+                    <tbody>
+                      <tr class="table-body table-body-light table-body-row">
+                        <td>.</td>
+                        <td>.</td>
+                        <td> 
+                          <div class="table-body-option"><a class="btn-primary btn-link btn-icon-sm" href="javascript:void(0)" onclick="showFormCardSale(1,1)"> <img src="./image/print/market.png" alt="delivery" width="24" height="24">
+                              <p class="btn-icon-txt">ajouter carte vendues</p></a><a class="btn-warning btn-link btn-icon-sm js-btn-sale-detail" href="javascript:void(0)" onclick="showFormDetailVente(1)"> <img src="./image/print/detail.png" alt="details" width="24" height="24">
+                              <p class="btn-icon-txt">Details</p></a></div>
+                        </td>
+                      </tr>
+                      <tr class="table-body table-body-light table-body-row">
+                        <td>.</td>
+                        <td>.</td>
+                        <td>.</td>
+                      </tr>
+                      <tr class="table-body table-body-light table-body-row">
+                        <td>.</td>
+                        <td>.</td>
+                        <td>.</td>
+                      </tr>
+                      <tr class="table-body table-body-light table-body-row">
+                        <td>.</td>
+                        <td>.</td>
+                        <td>.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div class="footer">
+        <div class="grid">
+          <div class="grid__cell"></div>
+        </div>
+      </div>
+      <script src="../../script/jquery.min.js"></script>
+      <script src="../../script/slick.min.js"></script>
+      <script src="../../script/slider.js"></script>
+      <script src="../../script/TweenMax.min.js"></script>
+      <script src="../../script/TweenLite.min.js"></script>
+      <script src="../../script/menu-hamburger.js"></script>
+      <script src="../../script/modal.js"></script>
+      <script src="../../script/sticky-user.js"></script>
+      <script src="../../script/all.js"></script>
+      <script src="../../script/map.js"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHTRkTQufLOIRw30x5U2NoaTBGKmKuAqI&amp;callback=initMap"></script>
+      <script src="../../script/skill.bars.jquery.js"></script>
+      <script src="../../script/chart.js"></script>
+      <script src="../../script/video.js"></script>
+      <script src="../../script/svg-donut-chart-framework.js"></script>
+    </div>
+  </body>
+</html>

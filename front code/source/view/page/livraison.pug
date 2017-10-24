@@ -1,0 +1,26 @@
+.modal-background
+.modal-sm.modal
+  .grid
+    .grid__cell
+      h2.modal-title Livraison
+      .modal-body
+        .input-bloc
+          label.input-label.input-label-carte Employe
+          input.input-default-txt(name="employe" id="employe" disabled="disabled")
+        .input-bloc.input-bloc-bottom
+          label.input-label quantité
+          input.input-number(type="number" name="quantite" id="quantite" value="0")
+        .input-bloc.input-bloc-bottom
+          input.input-default-txt(type="hidden" name="resteNonVendu" id="resteNonVendu" value="0")
+        .input-bloc.input-bloc-bottom
+          label.input-label date de livraison
+          input.input-date.input-date(type="date" name="dateLivraison" id="dateLivraison")
+        .input-bloc.input-bloc-bottom
+          label.input-label point de vente
+          select.input-select.input-employe(name="pointDeVente" id="pointDeVenteemploye")
+            option(value="0") sélectionner un pv
+            option(value="01") pv01
+            option(value="02") pv02
+        .input-bloc.input-bloc-bottom.input-bloc-submit
+          a.btn-primary-border.btn-add-delivery.btn-link(href="javascript:void(0)") ajouter
+          a.btn-dark.btn-close.btn-link(href="#") annuler

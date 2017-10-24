@@ -1,0 +1,30 @@
+{
+  "name": "welfarify",
+  "version": "1.0.0",
+  "description": "TPT",
+  "main": "gulp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Lioka@bitbucket.org/rahanjonirina-vonjy/welfarify.git"
+  },
+  "author": "Lioka",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/rahanjonirina-vonjy/welfarify#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-auto-reload": "^0.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-debug": "^3.1.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-serve": "^1.4.0"
+  }
+}

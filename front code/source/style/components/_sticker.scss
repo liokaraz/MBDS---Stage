@@ -1,0 +1,15 @@
+.sticker {
+  &-simple {
+    font-family: $font-template;
+    text-decoration: none;
+    background-color: $search-hover;
+    color: $white;
+    padding: 20px;
+    border-radius: 50px;
+    position: fixed;
+    z-index: 100;
+    margin-top: 0;
+    margin-left: 50%;
+    //border-top: 0;
+  }
+}

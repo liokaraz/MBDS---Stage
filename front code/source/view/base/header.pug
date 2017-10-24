@@ -1,0 +1,22 @@
+.header
+  .grid
+    .grid__cell(class="1/2--thumb 1/2--handheld 1/2--handheld-and-up 1/3--desk btn__menu-hamburger")
+      button(class="btn-menu")
+        img(alt="menu hamburger" class="" src="../../image/modal/menu.png")
+    .grid__cell(class="1/4--desk 1/2--handheld")
+      .header-logo
+        h1.header-logo-txt bienvenue
+    .grid__cell(class="1/4--desk 1/2--handheld")
+        .header-logImg
+          img.header-logImg-img(src="/image/header/logo2.0.png")
+    .grid__cell(class="1/4--desk")
+      .header-user
+        img.header-user-img(src="/image/accueil/user.jpg" width="100" height="100")
+        p.header-user-name RAZ. Tovoniarivo. Lioka
+      .header-user-menu
+        ul.header-user-menu-list
+          a.header-user-menu-link(href="#")
+            li.header-user-menu-item profil
+          a.header-user-menu-link(href="#")
+            li.header-user-menu-item logout
+include ../page/menu-hamburger.pug

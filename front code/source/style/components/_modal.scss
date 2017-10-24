@@ -1,0 +1,81 @@
+.modal {
+  opacity: 0;
+  display: none;
+  &-background {
+    display: none;
+    background-color: $black;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 99;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    &-detail {
+      @extend .modal-background;
+    }
+  }
+  &-sm {
+    background-color: $white;
+    width: 30%;
+    padding: 20px;
+    position: fixed;
+    top: 50px;
+    z-index: 100;
+    left: 50%;
+    transform: translate(-50%, 0);
+    @include media(all-tablets) {
+      width: 50%;
+    }
+    @include media(all-phones) {
+      width: 89%;
+    }
+  }
+  &-md {
+    @extend .modal-sm;
+    width: 50%;
+  }
+  &-title {
+    font-family: $font-template;
+    font-weight: lighter;
+    text-transform: uppercase;
+    color: $white;
+    background-color: $primary-color;
+    margin: -21px;
+    padding: 20px;
+    &-header {
+      margin-top: 0;
+    }
+  }
+  &-body {
+    margin-top: 40px;
+    color: $text-color;
+  }
+  &-right {
+    left: 150%;
+    top: 273px !important;
+  }
+  &-option {
+    background-color: $primary-color;
+    color: $white;
+    &-item {
+      font-size: 20px;
+      border-bottom: solid 1px;
+      margin: 0;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-left: 5px;
+      &:hover {
+        background-color: $white;
+        color: $primary-color !important;
+        .btn-link-white {
+          color: $primary-color !important;
+        }
+      }
+    }
+
+  }
+  &-second {
+    @extend .modal;
+  }
+}

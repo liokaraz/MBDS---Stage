@@ -1,0 +1,27 @@
+.modal-background
+.modal-sm.modal
+  .grid
+    .grid__cell
+      h2.modal-title ajout carte
+      .modal-body
+        .input-bloc
+          label.input-label.input-label-carte carte
+          select.input-select.input-carte(name="carte" id="carte")
+            option(value="0") sélectionner une carte
+            option(value="01") 01
+            option(value="02") 02
+        .input-bloc.input-bloc-bottom
+          label.input-label employé
+          select.input-select.input-employe(name="employe" id="employe")
+            option(value="0") sélectionner un employé
+            option(value="01") Lioka
+            option(value="02") Malala
+        .input-bloc.input-bloc-bottom
+          label.input-label quantité
+          input.input-number.input-quantite(type="number" name="quantite" id="quantite" value="0")
+        .input-bloc.input-bloc-bottom
+          label.input-label date
+          input.input-date.input-date(type="date" name="date" id="date")
+        .input-bloc.input-bloc-bottom.input-bloc-submit
+          a.btn-primary-border.btn-add-card.btn-link(href="javascript:void(0)") ajouter
+          a.btn-dark.btn-close.btn-link(href="#") annuler

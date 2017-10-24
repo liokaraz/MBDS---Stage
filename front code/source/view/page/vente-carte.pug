@@ -1,0 +1,19 @@
+.modal-background
+.modal-sm.modal
+  .grid
+    .grid__cell
+      h2.modal-title Vente carte
+      .modal-body
+        input.input-default-txt(type="hidden" name="idLivraison" id="idLivraison" )
+        .input-bloc
+          label.input-label.input-label-carte quantite
+          input.input-default-txt(type="number" name="quantite" id="quantite" required="required")
+        .input-bloc.input-bloc-bottom
+          label.input-label point de vente
+          input.input-number(type="text" name="pointDeVente" id="pointDeVente" disabled="disabled")
+        .input-bloc.input-bloc-bottom
+          label.input-label date vente
+          input.input-date.input-date(type="date" name="dateVente" id="dateVente" required="required")
+        .input-bloc.input-bloc-bottom.input-bloc-submit
+          a.btn-primary-border.btn-add-cardsale.btn-link(href="javascript:void(0)") ajouter
+          a.btn-dark.btn-close.btn-link(href="#") annuler

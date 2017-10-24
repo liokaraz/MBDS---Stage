@@ -1,0 +1,112 @@
+.menu {
+  background-color: $white;
+  &-item {
+    display: flex;
+    font-family: $font-template;
+    border-bottom: solid 0.3px $grey-fine;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: margin-left 0.3s;
+    &-title {
+      text-transform: capitalize;
+      color: $title-color-default;
+      font-size: 18px;
+      font-weight: lighter;
+    }
+    &:hover {
+      margin-left: 20px;
+    }
+  }
+  &-pv:hover &-box-img {
+    margin-left: 15px;
+  }
+  &-box {
+    padding: 10px;
+    padding-left: 30px;
+    margin-top: 70px;
+    font-family: $font-template;
+    @include media(all-phones){
+      margin-top: 0;
+    }
+    &-txt {
+      border-left: solid 3px $white;
+      padding-left: 10px;
+      margin-top: -31px;
+      padding-top: 50px;
+      &-info {
+        font-weight: lighter;
+      }
+    }
+    &-img {
+      margin-left: 50%;
+      margin-top: -90px;
+      transition: margin-left 0.2s;
+      @include media(all-tablets) {
+        margin-left: 0;
+      }
+      @include media(all-phones) {
+        width: 200px;
+        height: 200px;
+        margin-left: 50%;
+        transform: translate(-50%, 0);
+        padding-top: 20px;
+      }
+    }
+    &-option {
+      @include media(all-phones) {
+        margin-top: -25px;
+      }
+    }
+  }
+  &-background {
+    background-color: $color-back;
+    color: $white;
+    height: 100%;
+  }
+  &-block {
+    display: flex;
+    &-img {
+      cursor: pointer;
+      transition: border-left 0.2s, padding-left 0.2s;
+    }
+
+    @include media(desktop landscape-tablets) {
+      &:hover &-img {
+        border-left: solid 5px $white;
+        padding-left: 10px;
+      }
+      &:hover > .menu-label-info {
+        margin-left:-322px;
+        opacity: 1;
+      }
+      &:hover .menu-box-img {
+        margin-left: 40% !important;
+      }
+    }
+
+
+  }
+  &-accueil {
+    margin-top: 20px;
+  }
+  &-label {
+    padding-top: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    &-info {
+      opacity: 0;
+      position: absolute;
+      width: 300px;
+      margin-top: 40px;
+      font-weight: lighter;
+      margin-left: -400px;
+      transition: margin-left 0.2s, opacity 0.2s;
+      @include media(all-phones) {
+        display: none;
+      }
+    }
+  }
+  @include media(all-phones all-tablets){
+    display: none;
+  }
+}

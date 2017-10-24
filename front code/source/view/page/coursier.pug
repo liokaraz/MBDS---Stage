@@ -1,0 +1,64 @@
+extends ../base/layout.pug
+include ./mixin
+
+block main
+  include livraison.pug
+  include details-livraison.pug
+  .grid
+    .grid__cell(class="1/4--desk")
+      .menu
+        +menu({
+          img:'icone-budget.png',
+          title: "budget"
+        })
+        +menu({
+          img:'icone-carte.png',
+          title: "carte"
+        })
+        +menu({
+          img:'icone-point-de-vente.png',
+          title: "point de vente"
+        })
+    .grid__cell(class="3/4--desk")
+      .content
+        .content__header 
+          h1.content__header-title gestion point de vente
+          p.content__header-txt Suivie des points de ventes (stock actuels, etc, ...)
+        .content__body
+          .content__body-link
+            a.btn-success-dark.btn-link.btn-icon(href="#") 
+              img(src="./image/print/excel.png")
+              p.btn-icon-txt Version Excel
+            a.btn-danger.btn-link.btn-icon.btn-pdf(href="#") 
+              img(src="./image/print/pdf.png")
+              p.btn-icon-txt Version Pdf
+          .content__body-table#js-content__body
+            table.table-default.table-liste
+              thead
+                td.table-header Carte
+                td.table-header Nombre
+                td.table-header Action
+              tbody
+                tr.table-body.table-body-light.table-body-row
+                  td .
+                  td .
+                  td 
+                    .table-body-option
+                      a.btn-primary.btn-link.btn-icon-sm.js-btn-delivery(href="javascript:void(0)" onclick="showFormLivraison('idEmployeStock')") 
+                        img(src="./image/print/delivery2.0.png" alt="delivery" width="24" height="24")
+                        p.btn-icon-txt Livrer
+                      a.btn-warning.btn-link.btn-icon-sm.js-btn-detail(href="javascript:void(0)" onclick="showDetailsLivraison(idEmpStock)") 
+                        img(src="./image/print/detail.png" alt="details" width="24" height="24")
+                        p.btn-icon-txt Details
+                tr.table-body.table-body-light.table-body-row
+                  td .
+                  td .
+                  td .
+                tr.table-body.table-body-light.table-body-row
+                  td .
+                  td .
+                  td .
+                tr.table-body.table-body-light.table-body-row
+                  td .
+                  td .
+                  td .

@@ -1,0 +1,27 @@
+.popup-video {
+  position: absolute;
+  left: 27%;
+  width: 50%;
+  display: none;
+  z-index:2;
+  transition: display 0.3s;
+}
+
+.box-image {
+  //z-index: 55;
+  text-align: center;
+  cursor: pointer;
+}
+
+.popup-background {
+  display: none;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  transition: all 0.3s;
+}

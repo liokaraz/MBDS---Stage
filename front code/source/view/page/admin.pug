@@ -1,0 +1,62 @@
+extends ../base/layout.pug
+include ./mixin
+
+block main
+  include ajout-carte.pug
+  include notif-add.pug
+  include detail.pug
+  .grid
+    .grid__cell(class="1/4--desk")
+      .menu
+        +menu({
+          img:'user-admin.png',
+          title: "utilisateur"
+        })  
+        +menu({
+          img:'credit-card-admin.png',
+          title: "carte"
+        })
+        +menu({
+          img:'employee.png',
+          title: "employé"
+        })
+        +menu({
+          img:'car-admin.png',
+          title: "point de vente"
+        })
+        +menu({
+          img:'settings.png',
+          title: "paramétrage"
+        })
+
+    .grid__cell(class="3/4--desk")
+      .content
+        .content__header 
+          h1.content__header-title Utilisateur
+          p.content__header-txt C'est la gestion des utilisateurs
+        .content__body
+          .content__body-link
+            a.btn-warning.btn-link.btn-icon.js-btn-add-card(href="#")
+              img(src="./image/print/add.png")
+              p.btn-icon-txt ajouter un utilisateur
+            a.btn-primary.btn-link.btn-icon.btn-search(href="#")
+              img(src="./image/print/search.png")
+              p.btn-icon-txt recherche
+          .content__body-table#js-content__body
+            table.table-default.table-liste
+              thead
+                td.table-header nom
+                td.table-header prénom
+              tbody
+                tr.table-body.table-body-light.table-body-row(ondblclick="showDetail(this)")
+                  td RAZAFINDRAVOHITRA 
+                  td T.Lioka
+                tr.table-body.table-body-light.table-body-row
+                  td RAMANANTSOA
+                  td Malala
+                tr.table-body.table-body-light.table-body-row
+                  td RAZAFINDRAVOHITRA
+                  td Isaia
+                tr.table-body.table-body-light.table-body-row
+                  td RAZAFINDRAINIBE
+                  td Eric

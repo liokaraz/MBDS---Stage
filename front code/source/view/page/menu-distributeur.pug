@@ -1,0 +1,36 @@
+extends ../base/layout.pug
+include ./mixin
+
+block main
+  .menu-background
+    .menu-box
+      .grid
+        .grid__cell(class="3/4--desk 3/4--lap-and-up 2/3--handheld-and-up")
+          .menu-box-block
+            .menu-box-txt
+              h1.menu-box-txt-info Bienvenue
+            img.menu-box-img(src="/image/accueil/image-mid.png")
+        .grid__cell(class="1/4--desk 1/4--lap-and-up 1/3--handheld-and-up")
+          .menu-box-option
+            .grid
+              .grid__cell(class="1/2--thumb")
+                .menu-block
+                  img.menu-block-img.menu-accueil(src="/image/accueil/icone-profil.png" alt="budget image")
+                  p.menu-label-info Gestion de votre profil (login, mot de passe et avatar)
+                  p.menu-label.txt-capitalize profil
+              .grid__cell(class="1/2--thumb")            
+                .menu-block
+                  img.menu-block-img.menu-accueil(src="/image/accueil/icone-carte.png" alt="carte image")
+                  p.menu-label.txt-capitalize carte
+                  p.menu-label-info C'est la section où l'on gère la vente des cartes de crédits
+            .grid
+              .grid__cell(class="1/2--thumb")
+                .menu-block
+                  img.menu-block-img.menu-accueil.menu-pv(src="/image/accueil/icone-point-de-vente.png" alt="carte image")
+                  p.menu-label.txt-capitalize point de vente
+                  p.menu-label-info Suivie des points de ventes (stock actuels, etc, ...)
+              .grid__cell(class="1/2--thumb")
+                .menu-block
+                  img.menu-block-img.menu-accueil(src="/image/accueil/icone-budget.png" alt="budget image")
+                  p.menu-label.txt-capitalize budget
+                  p.menu-label-info Ici vous trouverez le budget hebdomadaire, mensuel, etc, ...

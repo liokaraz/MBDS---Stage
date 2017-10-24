@@ -1,0 +1,71 @@
+.input {
+  &-txt {
+    font-family: $font-template;
+    color: $text-color;
+    border: none;
+    border-bottom: solid $text-color 2px;
+    padding: 10px;
+    &:focus {
+      outline: none;
+    }
+  }
+  &-default {
+    &-txt {
+      width: 50%;
+      padding: 10px 5px;
+    }
+  }
+  &-checkbox {
+    background: transparent !important;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+  }
+  &-label {
+    text-transform: capitalize;
+    &-carte {
+      font-size: 20px;
+    }
+  }
+  &-select {
+    padding: 10px 5px;
+    width: 50%;
+    &:focus {
+      outline: none;
+    }  
+  }
+  &-bloc {
+    display: flex;
+    justify-content: space-between;
+    &-bottom {
+      margin-top: 15px;
+    }
+    &-submit {
+      margin-left: 40px;
+      @include media(all-phones) {
+        margin-left: -7px;
+      } 
+    }
+  }
+  &-number {
+    @extend .input-select;
+  }
+  &-date {
+    @extend .input-select;
+  }
+  &-employe {
+    margin-left: 33px;
+    width: 53%;
+  }
+  &-carte {
+    margin-left: 47px;
+    width: 53%;
+  }
+  &-quantite {
+    margin-left: 35px;
+  }
+  &-date {
+    margin-left: 61px;
+  }
+}

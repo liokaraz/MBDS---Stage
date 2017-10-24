@@ -1,0 +1,17 @@
+mixin input-bloc-login(options)
+  -label = options.label || "insert your label here";
+  -namee = options.name || "#";
+  -valueInput = options.value || "0";
+  .input-bloc
+    input.input-checkbox#js-user.js-user(type="radio" name="user" value=valueInput)
+    label=label
+
+mixin menu(options)
+  -img = options.img || "icone-budget.png";
+  -title = options.title || "menu-title";
+  -src = "./image/accueil/";
+
+  a.btn-link(href="#")
+    .menu-item
+      img.menu-item-img(src=src+img)
+      p.menu-item-title=title

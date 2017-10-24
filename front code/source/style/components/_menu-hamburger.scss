@@ -1,0 +1,30 @@
+.menu-hamburger {
+  display: flex;
+  flex-direction: column;
+  left: -1500px;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  background-color: $white;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  padding-right: 20px;
+  font-family: $font-template;
+  text-transform: uppercase;
+  color: $white;
+  width: 70%;
+  font-weight: lighter; 
+  overflow-y: scroll;
+  &-user {
+    border-radius: 55px;
+    left: 50%;
+    transform: translate(60%,0);
+  }
+  &-username {
+    color: $text-color;
+    font-family: $font-template;
+    font-size: 16px;
+    font-weight: 400;
+  }
+}

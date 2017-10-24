@@ -1,0 +1,58 @@
+extends ../base/layout.pug
+include ./mixin
+
+block main
+  include ajout-carte.pug
+  include notif-add.pug
+  include detail.pug
+  .grid
+    .grid__cell(class="1/4--desk")
+      .menu
+        +menu({
+          img:'icone-statistique.png',
+          title: "statistique"
+        })
+        +menu({
+          img:'icone-carte.png',
+          title: "carte"
+        })
+        +menu({
+          img:'icone-point-de-vente.png',
+          title: "point de vente"
+        })
+    .grid__cell(class="3/4--desk")
+      .content
+        .content__header 
+          h1.content__header-title gestion carte
+          p.content__header-txt C'est la section où l'on gère la distribution des cartes de crédits
+        .content__body
+          .content__body-link
+            a.btn-warning.btn-link.btn-icon.js-btn-add-card(href="#")
+              img(src="./image/print/add.png")
+              p.btn-icon-txt ajouter carte
+            a.btn-primary.btn-link.btn-icon.btn-search(href="#")
+              img(src="./image/print/search.png")
+              p.btn-icon-txt recherche
+          .content__body-table#js-content__body
+            table.table-default.table-liste
+              thead
+                td.table-header carte
+                td.table-header nombres
+                td.table-header distribue a
+              tbody
+                tr.table-body.table-body-light.table-body-row(ondblclick="showDetail(this)")
+                  td .
+                  td .
+                  td .
+                tr.table-body.table-body-light.table-body-row
+                  td .
+                  td .
+                  td .
+                tr.table-body.table-body-light.table-body-row
+                  td .
+                  td .
+                  td .
+                tr.table-body.table-body-light.table-body-row
+                  td .
+                  td .
+                  td .

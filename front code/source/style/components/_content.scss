@@ -1,0 +1,39 @@
+.content {
+  padding: 20px;
+  margin-right: 20px;
+  background-color: $white;
+  font-family: $font-template;
+  @include media(all-phones) {
+    margin-right: 0;
+  }
+  &__header {
+    color: $primary-color;
+    border-left: solid 4px $primary-color;
+    padding-left: 5px;
+    &-title {
+      text-transform: capitalize;
+      font-weight: lighter;
+      margin-bottom: 0;
+    }
+    &-txt {
+      font-weight: lighter;
+      color: $text-color;
+      margin-top: 0;
+    }
+  }
+  &__body {
+    margin-top: 40px;
+    &-link {
+      display: flex;
+    }
+  }
+  &-link {
+    display: flex;
+  }
+  &-option {
+    border-left: solid 7px $primary-color;
+    padding: 10px;
+    margin-top: 20px;
+    display: flex;
+  }
+}

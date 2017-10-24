@@ -1,0 +1,53 @@
+.box {
+  &-login {
+    margin-left: 30%;
+    margin-top: 85px;
+    width: 50%;
+    font-family: $font-template;
+    @include media(portrait-tablets) {
+      margin-left: 25%;
+    }
+    @include media (portrait-tablets all-phones) {
+      margin-top: 0;
+    }
+    @include media(all-phones) {
+      width: 80%;
+      margin-left: 10%;
+    }
+    &-txt {
+      background-color: $primary-color;
+      color: $white;
+      text-transform: capitalize;
+      font-weight: lighter;
+      padding: 5px;
+      height: auto;
+      &-title {
+        font-weight: lighter;
+        text-align: center;
+      }
+      &-option {
+        padding: 10px;
+        margin-top: 50px;
+        @include media(portrait-tablets) {
+          margin-top: 0;
+          padding-top: 0;
+        }
+        @include media(all-phones) {
+          margin-top: 0;
+          padding-top: 0;
+        }
+      }
+    }
+    &-form {
+      padding: 10px;
+      &-title {
+        color: $title-color-default;
+        font-weight: lighter;
+      }
+      &-input {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+extends ../base/layout.pug
+include ./mixin
+
+block main
+  include notif-add.pug
+  include detail.pug
+  .grid
+    .grid__cell(class="1/4--desk")
+      .menu
+        +menu({
+          img:'icone-budget.png',
+          title: "budget"
+        })
+        +menu({
+          img:'icone-carte.png',
+          title: "carte"
+        })
+        +menu({
+          img:'icone-point-de-vente.png',
+          title: "point de vente"
+        })
+    .grid__cell(class="3/4--desk")
+      .content
+        .content__header 
+          h1.content__header-title gestion point de vente
+          p.content__header-txt Suivie des points de ventes (stock actuels, etc, ...)
+        .content__body
+          a.btn-warning.btn-link.js-btn-show-card.btn-icon-sm(href="#")
+            img(src="./image/print/list.png" alt="carte" width="32" height="32")
+            p.btn-icon-txt afficher sur la carte
+          .content__body-table#js-content__body
+            table.table-default.table-liste
+              thead
+                td.table-header point de vente
+                td.table-header zone de travail
+                td.table-header stock actuel
+              tbody
+                tr.table-body.table-body-light.table-body-row(ondblclick="showDetail(this)")
+                  td .
+                  td .
+                  td .
+                tr.table-body.table-body-light.table-body-row
+                  td .
+                  td .
+                  td .
+                tr.table-body.table-body-light.table-body-row
+                  td .
+                  td .
+                  td .
+                tr.table-body.table-body-light.table-body-row
+                  td .
+                  td .
+                  td .

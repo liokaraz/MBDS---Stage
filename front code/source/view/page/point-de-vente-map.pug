@@ -1,0 +1,48 @@
+extends ../base/layout.pug
+include ./mixin
+
+block main
+  include options-map.pug
+  .grid
+    .grid__cell(class="1/4--desk")
+      .menu
+        +menu({
+          img:'icone-budget.png',
+          title: "budget"
+        })
+        +menu({
+          img:'icone-carte.png',
+          title: "carte"
+        })
+        +menu({
+          img:'icone-point-de-vente.png',
+          title: "point de vente"
+        })
+    .grid__cell(class="3/4--desk")
+      .content
+        .content__header 
+          h1.content__header-title gestion point de vente
+          p.content__header-txt Suivie des points de ventes (stock actuels, etc, ...)
+        .content__body
+          .content-link
+            a.btn-warning.btn-link.btn-icon-sm(href="#") 
+              img(src="./image/print/list.png" alt="list" width="32" height="32")
+              p.btn-icon-txt Retour a la liste
+          .content-option
+            +input-bloc-login ({
+              name: "tous",
+              label: "Tous",
+              value: "0"
+            })
+            +input-bloc-login ({
+              name: "En-rupture-de-stock",
+              label: "En rupture de stock",
+              value: "0"
+            })
+            +input-bloc-login ({
+              name: "Etat-de-stock ",
+              label: "Etat de stock",
+              value: "0"
+            })
+          .content__body
+            #map.map

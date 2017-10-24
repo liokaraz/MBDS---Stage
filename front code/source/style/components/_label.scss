@@ -1,0 +1,17 @@
+.label {
+  &-bloc {
+    display: flex;
+    font-family: $font-template;
+    font-size: 18px;
+    &-title {
+      color: $title-color-default;
+      text-transform: capitalize;
+      font-weight: bold;
+    }
+    &-content {
+      color: $text-color;
+      font-weight: lighter;
+      margin-left: 10px;
+    }
+  }
+}

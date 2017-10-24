@@ -1,0 +1,70 @@
+.header {
+  background-color: $primary-color;
+  font-family: $font-template;
+  &-logImg {
+    @include media(all-phones) {
+      text-align: center;
+    }
+  }
+  &-logImg-img {
+    width: 217px;
+    margin-top: 17px;
+    height: auto;
+  }
+  &-logo {
+    background-color: $white;
+    width: 50%;
+    padding: 15px;
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 60px;
+    text-transform: capitalize;
+    color: $primary-color;
+    &-txt {
+      font-weight: lighter;
+    }
+  }
+  &-user {
+    display: flex;
+    position: absolute;
+    right: 6%;
+    top: 70px;
+    cursor: pointer;
+    z-index: 5;
+    &-img {
+      border-radius: 50px;
+    }
+    &-name {
+      padding-left: 10px;
+      color: $white;
+      font-size: 18px;
+    }
+    &-menu {
+      display: none;
+      opacity: 0;
+      position: fixed;
+      z-index: 3;
+      background-color: rgba(11, 57, 85, 0.8);
+      right: 7%;
+      top: 112px;
+      color: $white;
+      &-list {
+        list-style-type: none;
+        padding: 1px 60px;
+        border-top: solid 1px $white;
+      }
+      &-item {
+        text-transform: capitalize;
+      }
+      &-link {
+        text-decoration: none;
+        color: $white;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    @include media(all-phones all-tablets) {
+      display: none;
+    }
+  }
+}
